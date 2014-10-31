@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">    
+<head>
+    <meta charset="utf-8">
+    <title>Secret Coding Essentials</title>
+      <link
+      href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,600italic,700italic,900italic|Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/style.css" id="theme">    
+</head>
+ 
+<body>
+    <div class="reveal">
+      <div class="slides">
+
+            <section>
+              <h2>Secret Coding Essentials for Beginners</h2>
+              <p>
+              <em>
+              Brought to you by 
+              <a href="http://codekitchen.mit.edu/">
+              CodeKitchen
+              </a>
+              </em>
+              </p>
+            </section>
+
+ 
+            <section>
+              <p>
+              This is an <strong>interactive</strong> lecture, with some hands on play. Feel free to
+              pause me at any time with questions.
+              </p>
+            </section>
+
+
+            <section>
+              <h2>What is this about?</h2>
+            </section>
+
+            <section>
+              <p>
+A lot of coding tutorials make unspoken assumptions about what a reader already
+knows. This workshop demystifies the hardest parts of getting started. 
+              </p>
+            </section>
+
+            <section>
+              <p>
+We will cover the basics of the command line, text editors, servers, data
+types, and package managers. This tutorial aims to make other tutorials easier.
+              </p>
+            </section>
+
+            <section>
+              <h2>What is code?</h2>
+            </section>
+
+            <section>
+              <p> <span class="quote">I had a running compiler and nobody would touch it. ... they
+              carefully told me, computers could only do arithmetic; they could
+              not do programs.</span> — Grace Hopper
+              </p>
+              <img src="img/hopper.jpg" alt="">
+            </section>
+
+
+            <section>
+              <p>Code is text that is read by computers</p>
+              <p>Code gives precise instructions to a computer.</p>
+            </section>
+
+            <section>
+              <p>Machines do exactly what you tell them to do.</p>
+              <p>But when you give them instructions, you must be exact.</p>
+            </section>
+
+            <section>
+              <p>This is why coding languages have rules about syntax. These
+              rules are strict and they tell the computer exactly how to
+              interpret the text.</p>
+            </section>
+
+            <section>
+              <p>If you make one little syntax error, it might break
+              everything. Coding requires patience and precision because
+              computers are kind of stupid.</p> 
+            </section>
+
+            <section>
+              <h2>Q: How do we make precise text?</h2>
+              <h2 class="magenta">A: With a 
+                <a href="http://codekitchen.mit.edu/editors/">text editor</a>!</h2>
+            </section>
+
+            <section>
+              <p>
+              Text editors are used to make precisely composed text and they
+              have a variety of features to make your life easier.
+              </p> 
+            </section>
+
+            <section>
+              <p>
+              For example, text editors can highlight the syntax of different coding
+              languages to help you prevent errors.
+              </p> 
+              <img src="img/highlight.png" alt="">
+            </section>
+
+            <section>
+              <p>
+              Take a moment to open 
+              <a href="https://www.dropbox.com/s/ni7tz5i5laihlch/index.html?dl=1"> this file </a>
+              in your text editor, to see
+              syntax highlighting in action. Most tutorials assume you already
+              have a text editor that you are using.
+              </p> 
+            </section>
+
+            <section>
+              <p>
+              <strong>To review:</strong> Code is text that contains precise
+              instructions for a computer. You can use text editors to edit
+              text precisely.
+              </p> 
+            </section>
+
+            <section>
+              <p>To make a piece of software, it usually takes many text files
+              that are carefully organized into a bunch of folders. We can
+              call this collection of folders and text files the "source code"
+              of a particular piece of software.
+              </p> 
+            </section>
+
+            <section>
+              <p>In other words, to create software, you spend a lot of time
+              carefully editing text files and making sure that they are in
+              the right folders. One of the most essential unspoken skills in
+              programming is careful file and folder organization.
+              </p> 
+            </section>
+
+            <section>
+              <h2>Let's talk about file paths!</h2> 
+            </section>
+
+            <section>
+              <p>We are going to use
+              <a href="https://gist.github.com/bengolder/7997954">
+              this set of examples
+              </a> to guide our work with the command line.
+              
+              </p>
+              <p> Open your command line now. Where are you? Try typing 
+              <code>pwd</code>. </p> 
+              <p> Can you figure out how to get to your desktop? Try using
+              <code>ls</code>, <code>cd</code>, and <code>pwd</code> to get there.</p> 
+            </section>
+
+            <section>
+              <p>You should be looking at file paths. They might look
+              something like this:</p>
+              <pre>/Users/bgolder
+~/Desktop
+../Downloads
+/Users/bgolder/downloads</pre>
+            </section>
+
+            <section>
+              <p>File paths are <strong>really important</strong>. Tons and
+              tons of software is made with the assumption that certain files
+              will be in certain locations, and in certain folders.</p> 
+              <p>Let's talk about the difference between <strong>relative</strong> and <strong>absolute</strong> file paths.
+              </p>
+            </section>
+
+            <section>
+              <p><strong>Absolute file paths</strong> are reliable file paths
+              that point to one particular location on your computer,
+              regardless of your current directory. They often start with the
+              root directory (a slash <code>/</code> on Mac or Linux, or
+              <code>C:\\</code> on
+              Windows).
+              </p>
+              <pre>/Users/bgolder/Dropbox/codekitchen/workshops</pre>
+            </section>
+
+            <section>
+              <p><strong>Relative file paths</strong> are defined in relation
+              to your current directory. For example, if I am in 
+              <code>Desktop</code>, I can use
+              <code>cd ..</code> to go up one directory to my user home folder.
+              then I can use 
+              <code>cd Downloads</code> to go to my Downloads folder. In this
+              example, they could be combined to be 
+             <code>cd ../Downloads</code>, which would mean: "up one directory,
+              then down into Downloads."</p>
+            </section>
+
+
+            <section>
+              <p>Now we are going to make a script. Use your texteditor to
+              make a file called 
+              <code>ohyeah.sh</code> that contains only one line of text:
+              </p>
+              <pre>echo "Totally rad." </pre>
+              <p>Save this somewhere and figure out the file path to this
+              file.</p>
+            </section>
+
+            <section>
+              <p>You just wrote a shell script. A rad one. Congratulations.
+              Let's run it. Use the file path to run the script like this:
+              </p>
+              <pre>bash ../path/to/script/ohyeah.sh</pre>
+            </section>
+
+            <section>
+              <p>Now use 
+              <code>cd</code> to go to other locations on your computer,
+              figure out the file path and run it using absolute or relative
+              file paths.
+              </p>
+            </section>
+
+            <section>
+              <p>What if we wanted to be able to run our script from anywhere
+              without having to remember the path?
+              </p>
+              <p>We have two choices: put it in one of several folders that
+              are on <code>PATH</code>, or add its current folder to <code>PATH</code>.</p>
+              <p>Let's look at <code>PATH</code>. type:</p>
+              <pre>echo $PATH</pre>
+            </section>
+
+            <section>
+              <p>
+              Let's edit <code>PATH</code>. Use your text editor to create this file (or
+              open it if it already exists):
+              </p>
+              <pre>~/.bash_profile</pre>
+              <p>If you are on Windows, you will instead need to go to Control
+              Panel, then "Edit System Environmental Variables", then ask for
+              assistance.</p>
+            </section>
+
+            <section>
+              <p>We want to add this line to the file:
+              </p>
+              <pre>export PATH=$PATH:path/to/script</pre>
+              <p>Now type:</p>
+              <pre>source ~/.bash_profile</pre>
+              <p>or start a new Terminal window. Then try running your script
+              without the full file path:</p>
+              <pre>bash ohyeah.sh</pre>
+              <p>This should work regardless of which directory you are
+              currently in.</p>
+            </section>
+
+            <section>
+              <p>A few important lessons to get out of this:
+              </p>
+              <ol>
+                <li><code>PATH</code> is a list of folders where commands are
+                found. Everything command we use on command line is in a
+                folder that is on the <code>PATH</code>.</li> 
+                <li>File paths and folders are essential to making things work.</li>
+                <li>You can make a shell script by just writing shell commands
+                in a file and runnning it.</li>
+              </ol>
+            </section>
+
+
+            <section>
+              <h2>Part 2: The Server</h2>
+              <p>You'll need your mit user name for this part.</p>
+            </section>
+
+            <section>
+              <p>You've used <code>cd</code> to move around your computer. Let's use a
+              command that let's us move to another computer: <code>ssh</code>.
+              </p>
+              <pre>ssh username@athena.dialup.mit.edu</pre>
+              <p>When you enter your password, nothing will visibly change
+              until you hit enter.</p>
+            </section>
+
+            <section>
+              <p>Congratulations! You're now on the MIT athena servers. Take
+              some time to explore the folder structure.
+              </p>
+              <p>Let's see which other servers are connected to mit:</p>
+              <pre>cd /afs/
+ls -la</pre>
+            </section>
+
+            <section>
+              <p>In the simplest terms, a server is just another computer. But
+              we usually use servers for different purposes than our personal
+              computers. Servers are usually connected to the internet, or are
+              at least connected to a local network. They rarely have monitors
+              or GUI software. You can turn your own computer into a server.</p>
+              <p>We usually use <code>ssh</code> to manage and interact with servers.</p>
+            </section>
+
+            <section>
+              <p>To get out of the server and back to your computer:</p>
+              <pre>logout</pre>
+            </section>
+
+            <section>
+              <h2>Challenge: A tiny webpage</h2>
+              <p>Edit  
+              <a href="https://www.dropbox.com/s/ni7tz5i5laihlch/index.html?dl=1">
+              this file</a>, and place it on the server so that it can be
+                found with the following file path: </p>
+              <pre>~/www/secret/index.html</pre>
+              <p>
+              You can tell if it worked by going to:
+              </p>
+              <pre>http://web.mit.edu/username/www/secret/</pre>
+              <p>Use <a href="https://gist.github.com/bengolder/7997954"> these commands </a>
+              as needed.</p>
+            </section>
+
+            <section>
+              <h2>Part 3: Code, Community, and Open Source Package Management</h2>
+            </section>
+
+            <section>
+              <p>Let's go look at some code. 
+              <a href="https://github.com/joke2k/faker">This is a python
+              library that lets you generate fake names, addresses, and filler
+          text</a>.  Explore it and note that all of it is plain text files
+          (written in python) that are organized into folders. In the README
+          at the bottom, it says we can install it with 
+          </p>
+          <pre>pip install fake-factory</pre>
+          <p>What does this mean?</p>
+            </section>
+
+            <section>
+              <p>That run on command-line. Here is what it does:</p>
+              <ol>
+                <li>You command line looks for a script called 
+                <code>pip</code> in the current directory or on your path.
+                </li>
+                <li>
+                <a
+                href="http://pip.readthedocs.org/en/latest/installing.html">Pip</a>
+              is a python script that downloads and installs Python libraries.
+              So if you have pip installed, it will look for Python, becuase
+              it needs python to run.
+                </li>
+                <li>Pip knows you want to install something (because you said 
+                <code>install</code>). It takes the piece of text, 
+                <code>fake-factory</code>, and connects to the internet.
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <ol start="4">
+                <li>Pip searches through the Python Package Index (also called
+                "PyPI" or "The Cheeseshop" and finds a downloadable package
+                with the name you've asked for.</li>
+                <li>Pip downloads that file. Then it tries to carefully copy
+                the text files into specific folders, so that Python can use
+                 them.</li>
+              </ol>
+            </section>
+
+            <section>
+              <ol start="6">
+                <li>Once the files are in the right folders, you can use the
+                code.</li>
+              </ol>
+              <p>
+              <strong>But so many things are assumed.</strong>
+              </p>
+            </section>
+
+            <section>
+              <ol>
+                <li>You need to have Python installed, and available on PATH.</li>
+                <li>You need to have pip installed, and available on PATH.</li>
+                <li>You need to have an internet connection.</li>
+                <li>You need to be have permission to edit Python's special
+                folders for third-party libraries.</li>
+              </ol>
+            </section>
+
+            <section>
+              <p>Let's try to do this. And we can discuss the problems we run
+              into as a group.</p>
+            </section>
+
+      </div>
+    </div>
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+ 
+    <script>
+        // Required, even if empty.
+        Reveal.initialize({
+            history: true,
+            transition: 'none',
+        });
+    </script>
+</body>
+</html>
