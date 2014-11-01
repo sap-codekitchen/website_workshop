@@ -42,8 +42,7 @@
             </section>
 
             <section>
-              Same as before, this is a <strong>hands on</strong> workshop, so please feel free to
-              pause me at any time if something is not clear.
+              Same as before, this is a <strong>hands on</strong> workshop. Feel free to pause me any time if something is not clear.
             </section>
 
             <section>
@@ -159,10 +158,132 @@
 
             <section>
               <h3>Enough about standards, let's cook actual HTML!</h3>
-              <p>HTML is a tree with nodes</p>
-              <p>Each node is made </p>
             </section>
 
+            <section>
+              <p>HTML is a tree with nodes, where each node has:</p>
+              <ol>
+                <li class="reveal"><em>opening and closing pointy brackets</em></li> 
+              </ol>
+              <p class="reveal"> <code> <em>&lt</em>a href=”http://dusp.mit.edu”<em>&gt</em>link to DUSP<em>&lt/</em>a<em>&gt</em></code> 
+              </p>
+            </section>
+
+            <section>
+              <ol start="2">
+                <li class="reveal"><em>tag name (or node type)</em></li>
+              </ol>
+              <p class="reveal"> <code>&lt<em>a</em> href=”http://dusp.mit.edu”>link to DUSP&lt/<em>a</em>&gt</code> 
+            </section>
+
+            <section>
+              <ol start="3">
+                <li class="reveal"><em>contents</em>
+                   <p>this is what you see. It can hold other HTML tags as well</p>
+                </li>
+              </ol>
+              <p class="reveal"><code> &lta href=”http://dusp.mit.edu”&gt<em>link to DUSP</em>&lt/a&gt</code></p>
+            </section>
+
+            <section>
+              <ol start="4">
+                <li class="reveal"><em>attributes</em>
+                   <p>in the format <code>attributename=”value”</code></p>
+                </li>
+              </ol>
+              <p class="reveal"><code> &lta <em>href=”http://dusp.mit.edu”</em>&gtlink to DUSP&lt/a&gt</code></p>
+
+            </section>
+
+            <section>
+              <p>There are only a small set of commonly used tags.</p>
+              <code>h1,h2,h3,p,img,a,ol,ul</code>
+              <p>You can memorize most of them, but you can look them up any time. They are well documented.</p> 
+            </section>
+
+            <section>
+              <h3>Curious for more tags?</h3>
+              <p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">
+                Here
+                </a>
+              is an up-to-date list of all the HTML tags (tags are also sometimes called elements).</p>
+            </section>
+
+            <section>
+              <h2>Part 4: CSS</h2>
+              <h3>aka Cascading Style Sheets</h3> 
+              <p>which cascade like waterfalls of styling rules</p>
+            </section>
+
+            <section>
+              CSS has a simple, consistent syntax:
+              <code>
+                <p> selector { </p>
+                <p> setting: value; </p>
+                <p> } </p>
+              </code>
+            </section>
+
+            <section>
+              Here are some common CSS selectors:
+              <ol>
+                <li> Select via tag names</li>
+              </ol>
+              <code>
+                <p> tag <em>(eg: a,img,p)</em>{ </p>
+                <p> setting: value; </p>
+                <p> } </p>
+              </code>
+            </section>
+
+            <section>
+              <ol start="2">
+                <li> Select via class names</li>
+              </ol>
+              <code>
+                <p> .class-name <em>(note the dot!)</em>{ </p>
+                <p> setting: value; </p>
+                <p> } </p>
+              </code>
+            </section>
+
+            <section>
+              <ol start="3">
+                <li> Select via id names</li>
+              </ol>
+              <code>
+                <p> #id-name <em>(note the pound sign!) </em>{ </p>
+                <p> setting: value; </p>
+                <p> } </p>
+              </code>
+            </section>
+
+            <section>
+              CSS can get complicated quite fast. Especially if you want a fancy layout. It is not intuitive. But colors and fonts are easy! :)
+            </section>
+
+            <section>
+              <a href="http://flukeout.github.io/" target="_blank">
+                Here
+              </a>
+              is a great tutorial on CSS selectors
+            </section>
+
+            <section>
+              More on colors: you can enter colors in a number of ways
+             <!-- Ben this needs more input from you -->
+            </section>
+
+            <section>
+              <p>There are special units</p> 
+              <code> px, em, rem </code>
+              <!-- Ben this needs more input from you -->
+            </section>
+
+            <section>
+              <h2>Part 5: Go Live</h2>
+            </section>
 
       </div>
     </div>

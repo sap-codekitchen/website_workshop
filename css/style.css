@@ -19,6 +19,16 @@ body {
   color: #20275b;
 }
 
+.reveal em {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #b42d83;
+  font-style: normal; 
+}
+
+.reveal li p {
+  font-size: 1.9rem;
+}
+
 ::selection {
   background: #e74e80;
   color: #fefbdc;
@@ -84,7 +94,6 @@ code {
 .darkpink { color: #b42d83; }
 .magenta { color: #e74e80; }
 .orange { color: #f68e6e; }
-.light-blue {color: #00FFFF; }
 
 
 /*********************************************
