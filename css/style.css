@@ -19,16 +19,6 @@ body {
   color: #20275b;
 }
 
-.reveal em {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #b42d83;
-  font-style: normal; 
-}
-
-.reveal li p {
-  font-size: 1.9rem;
-}
-
 ::selection {
   background: #e74e80;
   color: #fefbdc;
@@ -115,6 +105,18 @@ code {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
+ * Other: Quirky code cases
+ *********************************************/
+.reveal em {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #b42d83;
+  font-style: normal; 
+}
+
+.reveal li p {
+  font-size: 1.9rem;
+}
+/*********************************************
  * QUOTES
  *********************************************/
 
@@ -132,3 +134,5 @@ span.quote::after {
   color: #20275b; 
   font-weight: 900;
 }
+
+
