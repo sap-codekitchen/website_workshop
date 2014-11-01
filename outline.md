@@ -20,14 +20,14 @@
 3. What is a web site?
 
     * a web page or more.
-    * sometimes it's just a bunch of different web pages
+    * sometimes it's just a bunch of different web pages //@Aizhan: how is this different from the previous point?
     * sometimes it is a server application that generates web pages on the fly
         (like Facebook), which would be called a web app
 
 4. Let's look at a web site
 
-    * make a folder (start with existing and then edit)
-    * make an html file
+    * make a folder (start with existing and then edit)  //@Aizhan: are you trying to make them the website or you are giving them one to look at?
+    * make an html file  //@Aizhan: if you are giving them one, they don't need to create html file. You will give them one. 
     * open it
     * look at the different files in the folder
     * change a few things and see the differences
