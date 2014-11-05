@@ -1,0 +1,40 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 130%;
+}
+
+#container {
+  max-width: 32rem;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+
+.options {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+}
+.options li {
+  float: left;
+  padding: 0.3rem 0.5rem;
+  color: #666;
+}
+.options li:hover {
+  color: #fff;
+  background-color: #ff4421;
+}
+
+
+img {
+  width: 100%;
+}
+
+

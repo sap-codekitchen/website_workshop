@@ -26,23 +26,27 @@
             </section>
 
             <section>
-              <h2>Part 0: Preliminaries</h2>
+              <h2>Before we start</h2>
               <p>Today we will build on the last week's workshop 
                <a href="http://web.mit.edu/bgolder/www/codekitchen/essentials/#/" target="_blank">
               Secret Coding Essentials. 
                </a>
-              I'll assume that you are comfortable working with a text editor of your choice and know super basic command line commands.
+              Make sure you have 
+              <a href="http://www.sublimetext.com/2">Sublime Text</a>
+              or some other 
+              <a href="http://codekitchen.mit.edu/editors/">text editor</a>
+              installed.
               </p>
             </section>
 
             <section>
-              <p>In this workshop you will be introduced to the basics of 'cooking' a delicious website. You will 'dissect' an example web site and look at its important ingredients called 
-              <code>HTML & CSS</code>
+              <p>In this workshop we will talk about what a website is, how to
+              "open it" and look inside, and how to make your own.
               </p>
             </section>
 
             <section>
-              Same as before, this is a <strong>hands on</strong> workshop. Feel free to pause me any time if something is not clear.
+              This is a <strong>hands on</strong> workshop. Feel free to pause me any time if something is not clear.
             </section>
 
             <section>
@@ -56,29 +60,49 @@
                   <li class="fragment">is a set of files that your browser (Chrome/Safari/Firefox/etc) downloads and then displays on a screen  </li>
                   <li class="fragment">has a precise address that you type to the URL bar at the top of your browser</li>
                   <li class="fragment">comes from another computer (typically a server)</li>
-                  <li class="fragment">is made out of <code>HTML, CSS, & JavaScript</code> (later...)</li>
+                  <li class="fragment">is made out of HTML, CSS, & JavaScript
+                  (more later on these)</li>
                   <li class="fragment">can be an interactive document (like Facebook)</li>
                 </ul>
               </section>
             </section>
 
             <section>
-              <p>Let's dissect a web page. First, let's look at HTML source code.</p>
-              <img src="img/source_code.jpg" alt="Source Code">
+              <p>
+              These slides are a web page.
+              <a href="http://codekitchen.mit.edu/">http://codekitchen.mit.edu/
+              </a>
+              is also an example of a web page
+              </p>
             </section>
 
+
             <section>
-              <p><strong>IFF you are using Google Chrome on a Mac, </strong>type <code>Option+Command+U</code> to look at the web page's source code.</p>
-              <p>For other OS+browsers read
+              <p>Every browser gives you the ability to see the source code of
+              the website. This is extremely useful for understanding and
+              building websites of your own.
+              </p>
+              <p>
+              If you are using Google Chrome on a Mac, type <code>Option+Command+U</code> to look at the web page's source code.</p>
                 <a href="https://blog.kissmetrics.com/how-to-read-source-code/" target="_blank">
-                here.
-                </a>
+              For other OS + browsers read here.  </a>
               </p> 
             </section>
 
+
             <section>
-              <p>Let's now look at console.IFF you are using Google Chrome on a Mac, </strong>type <code>Option+Command+I</code></p>
-              <img src="img/console.jpg" alt="Source Code">
+              <p>Where did these files come from?
+              <strong>A server!</strong>
+              </p>
+            </section>
+
+            <section>
+              <p>In the simplest terms, a server is just another computer. But
+              we usually use servers for different purposes than our personal
+              computers. Servers are usually connected to the internet, or are
+              at least connected to a local network. They rarely have monitors
+              or GUI software so they often accessed through the command line.
+              </p>
             </section>
 
             <section>
@@ -97,21 +121,15 @@
             </section> 
 
             <section>
-              <p>Let's look at the website that I pre-cooked for you. To test it out: </p>
+              <p>Let's look at a website: </p>
               <ol>
                 <li>Download the folder from
-                  <a href="http://web.mit.edu/bgolder/www/WebsiteWorkshopMaterials/" target="_blank">
-                    <!-- TODO:Ben!This link needs to be changed!!! -->
+                  <a href="https://www.dropbox.com/sh/9gzjdy7s43l9guz/AABHUfwevHGyD3loGBYFtoqTa?dl=1" target="_blank">
                     Dropbox
                   </a>
                 and save it somewhere on your computer
                 </li>
-                <li>Navigate to the folder using the <strong>Command Line! </strong>Feel free to review commands
-                  <a href="https://gist.github.com/bengolder/7997954" target="_blank">
-                    here
-                  </a>
-                  if you feel rusty.
-                </li>
+                <li> Open the folder with your text editor (like Sublime Text)</li>
                 <li>Change few things and see the difference</li>
 
               </ol>
@@ -132,8 +150,23 @@
 
             <section>
               <h2>Part 3: HTML</h2>
-              <h3>aka Hypertext Markup Language</h3>
+              <h3>(Hypertext Markup Language)</h3>
             </section>
+
+            <section>
+              <p>Let's look at the 
+              <strong>developer console</strong>. This is similar to looking at
+              the source code, except that instead of showing the original
+            code that was downloaded from the server, it shows us how the
+            browser sees the website <em>right at this moment</em>. The
+            console is powerful.
+            </p>
+
+            <p>
+            If you are using Google Chrome on a Mac, </strong>type <code>Option+Command+I</code>
+            </p>
+            </section>
+
 
             <section>
               <p>HTML is not really a language, it's actually a standard, a specification published by the W3C, World Wide Web Consortium. </p>
@@ -182,22 +215,30 @@
                    <p>this is what you see. It can hold other HTML tags as well</p>
                 </li>
               </ol>
-              <p class="reveal"><code> &lta href=”http://dusp.mit.edu”&gt<em>link to DUSP</em>&lt/a&gt</code></p>
+              <p class="reveal"><code> &lta href="http://dusp.mit.edu"&gt<em>link to DUSP</em>&lt/a&gt</code></p>
             </section>
 
             <section>
               <ol start="4">
                 <li class="reveal"><em>attributes</em>
-                   <p>in the format <code>attributename=”value”</code></p>
+                   <p>in the format <code>attributename="value"</code></p>
                 </li>
               </ol>
-              <p class="reveal"><code> &lta <em>href=”http://dusp.mit.edu”</em>&gtlink to DUSP&lt/a&gt</code></p>
+              <p class="reveal"><code> &lta <em>href="http://dusp.mit.edu"</em>&gtlink to DUSP&lt/a&gt</code></p>
 
             </section>
 
             <section>
               <p>There are only a small set of commonly used tags.</p>
-              <code>h1,h2,h3,p,img,a,ol,ul</code>
+<pre>body div p span a
+header navigation
+ul ol li
+link script
+img
+em strong
+form input
+</pre>
+
               <p>You can memorize most of them, but you can look them up any time. They are well documented.</p> 
             </section>
 
@@ -218,49 +259,51 @@
 
             <section>
               CSS has a simple, consistent syntax:
-              <code>
-                <p> selector { </p>
-                <p> setting: value; </p>
-                <p> } </p>
-              </code>
+<pre>selector {
+  setting: value;
+}
+</pre>
             </section>
 
             <section>
               Here are some common CSS selectors:
-              <ol>
-                <li> Select via tag names</li>
+              <p>
+               Select via tag names
+              </p>
+<pre>
+img { 
+  width: 100%; 
+} 
+</pre>
+          </section>
+
+            <section>
+                <p>
+                Select using a "class" attribute
+                </p>
               </ol>
-              <code>
-                <p> tag <em>(eg: a,img,p)</em>{ </p>
-                <p> setting: value; </p>
-                <p> } </p>
-              </code>
+<pre>.options {
+  list-style-type: none;
+}
+</pre>
             </section>
 
             <section>
-              <ol start="2">
-                <li> Select via class names</li>
-              </ol>
-              <code>
-                <p> .class-name <em>(note the dot!)</em>{ </p>
-                <p> setting: value; </p>
-                <p> } </p>
-              </code>
+              <p>
+                Select using the "id" attribute
+              </p>
+
+<pre>#container {
+  width: 32rem;
+}
+</pre>
             </section>
 
             <section>
-              <ol start="3">
-                <li> Select via id names</li>
-              </ol>
-              <code>
-                <p> #id-name <em>(note the pound sign!) </em>{ </p>
-                <p> setting: value; </p>
-                <p> } </p>
-              </code>
-            </section>
-
-            <section>
+              <p>
               CSS can get complicated quite fast. Especially if you want a fancy layout. It is not intuitive. But colors and fonts are easy! :)
+              </p>
+              <img src="img/css.gif" alt="">
             </section>
 
             <section>
@@ -272,13 +315,19 @@
 
             <section>
               More on colors: you can enter colors in a number of ways
-             <!-- Ben this needs more input from you -->
+
+<pre>
+color: orange;      // Color assigned by name
+color: #0f0;        // 3 digit hex
+color: #00ff00;     // 6 digit hex
+// color defined using RGB and "alpha" values
+color: rgba( 34, 12, 64, 0.3); 
+</pre>
             </section>
 
             <section>
               <p>There are special units</p> 
               <code> px, em, rem </code>
-              <!-- Ben this needs more input from you -->
             </section>
 
             <section>
